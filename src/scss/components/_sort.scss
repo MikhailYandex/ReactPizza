@@ -12,12 +12,24 @@
 
     b {
       margin-right: 8px;
+			@media (max-width: 430px){
+				font-size: 15px;
+			}
+			@media (max-width: 380px){
+				font-size: 12px;
+			}
     }
 
     span {
       color: $orange;
       border-bottom: 1px dashed $orange;
       cursor: pointer;
+			@media (max-width: 430px){
+				font-size: 15px;
+			}
+			@media (max-width: 380px){
+				font-size: 12px;
+			}
     }
   }
 
