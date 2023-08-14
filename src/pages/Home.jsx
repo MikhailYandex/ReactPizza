@@ -1,11 +1,12 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import Categories from "../components/Categories";
 import Sort from "../components/Sort";
 import PizzaBlock from "../components/PizzaBlock";
 import Skeleton from "../components/Skeleton";
 import Pagination from "../components/Pagination";
+import { SearchContext } from "../App";
 
-const Home = ({ searchValue }) => {
+const Home = () => {
   const [items, setItems] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const [categoryId, setCategoryId] = useState(0);
@@ -14,6 +15,7 @@ const Home = ({ searchValue }) => {
     name: "популярности",
     sortProperty: "rating",
   });
+	const { searchValue } = useContext(SearchContext);
 
   useEffect(() => {
     setIsLoading(true);
@@ -21,7 +23,7 @@ const Home = ({ searchValue }) => {
     const sortBy = sortType.sortProperty.replace("-", "");
     const category = categoryId > 0 ? `category=${categoryId}` : "";
     const order = sortType.sortProperty.includes("-") ? "asc" : "desc";
-		const search = searchValue ? `&search=${searchValue}` : "";
+    const search = searchValue ? `&search=${searchValue}` : "";
 
     fetch(
       `https://64d72bc82a017531bc13046a.mockapi.io/items?page=${currentPage}&limit=4&${category}&sortBy=${sortBy}&order=${order}${search}`
@@ -36,7 +38,7 @@ const Home = ({ searchValue }) => {
 
   const skeleton = [...new Array(6)].map((_, i) => <Skeleton key={i} />);
 
-	const pizzas = items.map((obj) => <PizzaBlock key={obj.id} {...obj} />);
+  const pizzas = items.map((obj) => <PizzaBlock key={obj.id} {...obj} />);
 
   // const pizzas = items
   //   .filter((obj) => {
@@ -58,7 +60,7 @@ const Home = ({ searchValue }) => {
       </div>
       <h2 className="content__title">Все пиццы</h2>
       <div className="content__items">{isLoading ? skeleton : pizzas}</div>
-			<Pagination onChangePage={number => setCurrentPage(number)} />
+      <Pagination onChangePage={(number) => setCurrentPage(number)} />
     </div>
   );
 };

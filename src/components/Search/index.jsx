@@ -1,8 +1,12 @@
 import styles from "./Search.module.scss";
 import search from "../assets/img/search.svg";
 import close from "../assets/img/close.svg";
+import { useContext } from "react";
+import { SearchContext } from "../../App";
 
-const Search = ({ searchValue, setSeachValue }) => {
+const Search = () => {
+  const { searchValue, setSeachValue } = useContext(SearchContext);
+
   return (
     <div className={styles.root}>
       <img className={styles.icon} src={search} alt="Поиск" />
@@ -14,7 +18,7 @@ const Search = ({ searchValue, setSeachValue }) => {
       />
       {searchValue && (
         <img
-					onClick={() => setSeachValue('')}
+          onClick={() => setSeachValue("")}
           className={styles.close}
           src={close}
           alt="Кнопка очистики инпута"
