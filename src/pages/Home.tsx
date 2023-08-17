@@ -1,29 +1,29 @@
-import { useContext, useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef } from "react";
 import qs from "qs";
-import Categories from "../components/Categories";
-import Sort, { list } from "../components/Sort";
-import PizzaBlock from "../components/PizzaBlock";
-import Skeleton from "../components/Skeleton";
-import Pagination from "../components/Pagination";
+import Categories from "../components/Categories.tsx";
+import Sort, { list } from "../components/Sort.tsx";
+import PizzaBlock from "../components/PizzaBlock.tsx";
+import Skeleton from "../components/Skeleton.tsx";
+import Pagination from "../components/Pagination/index.tsx";
 import { useDispatch, useSelector } from "react-redux";
 import {
   setCategoryId,
   setPageCount,
   setFilters,
-} from "../redux/slices/filterSlice";
+} from "../redux/slices/filterSlice.js";
 import { useNavigate } from "react-router-dom";
-import { fetchPizza } from "../redux/slices/pizzaSlice";
+import { fetchPizza } from "../redux/slices/pizzaSlice.js";
 
-const Home = () => {
-  const { categoryId, sort, pageCount, searchValue } = useSelector((state) => state.filter);
-  const { items, isLoading } = useSelector((state) => state.pizza);
+const Home: React.FC = () => {
+  const { categoryId, sort, pageCount, searchValue } = useSelector((state:any) => state.filter);
+  const { items, isLoading } = useSelector((state:any) => state.pizza);
 
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const isSearch = useRef(false);
   const isMount = useRef(false);
 
-  const onChangePage = (number) => {
+  const onChangePage = (number:number) => {
     dispatch(setPageCount(number));
   };
 
@@ -41,7 +41,7 @@ const Home = () => {
     const category = categoryId > 0 ? `category=${categoryId}` : "";
     const order = sort.sortProperty.includes("-") ? "asc" : "desc";
     const search = searchValue ? `&search=${searchValue}` : "";
-
+		// @ts-ignore
     dispatch(fetchPizza({ sortBy, category, order, search, pageCount }));
     window.scrollTo(0, 0);
   };
@@ -67,14 +67,14 @@ const Home = () => {
   }, [categoryId, sort.sortProperty, pageCount]);
 
   const skeleton = [...new Array(6)].map((_, i) => <Skeleton key={i} />);
-  const pizzas = items.map((obj) => <PizzaBlock key={obj.id} {...obj} />);
+  const pizzas = items.map((obj:any) => <PizzaBlock key={obj.id} {...obj} />);
 
   return (
     <div className="container">
       <div className="content__top">
         <Categories
           value={categoryId}
-          onChangeCategory={(i) => dispatch(setCategoryId(i))}
+          onChangeCategory={(i:number) => dispatch(setCategoryId(i))}
         />
         <Sort />
       </div>

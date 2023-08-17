@@ -1,9 +1,9 @@
 import { Route, Routes } from "react-router-dom";
 import "./scss/app.scss";
-import Header from "./components/Header";
-import Home from "./pages/Home";
-import NotFound from "./pages/Notfound";
-import Cart from "./pages/Cart";
+import Header from "./components/Header.tsx";
+import Home from "./pages/Home.tsx";
+import NotFound from "./pages/Notfound.tsx";
+import Cart from "./pages/Cart.tsx";
 
 function App() {
   return (
