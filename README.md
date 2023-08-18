@@ -6,6 +6,7 @@
 
 <img width="1503" alt="HowToLearn" src="https://github.com/MikhailYandex/ReactPizza/assets/114576286/c8363592-bafe-46db-938e-8f882a1592f4">
 
+---
 
 <img width="1503" alt="HowToLearn" src="https://github.com/MikhailYandex/ReactPizza/assets/114576286/f937a284-9541-45ee-b39e-0850dd7e704e">
 
