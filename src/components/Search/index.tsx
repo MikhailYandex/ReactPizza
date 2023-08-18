@@ -9,23 +9,23 @@ import debounce from "lodash.debounce";
 const Search: React.FC = () => {
   const [value, setValue] = useState("");
   const inputRef = useRef<HTMLInputElement>(null);
-	const dispatch = useDispatch();
+  const dispatch = useDispatch();
 
   const updateSearchValue = useCallback(
-    debounce((str:string) => {
-			dispatch(setSearchValue(str))
+    debounce((str: string) => {
+      dispatch(setSearchValue(str));
     }, 1000),
     []
   );
 
-	const onChangeInput = (e:React.ChangeEvent<HTMLInputElement>) => {
+  const onChangeInput = (e: React.ChangeEvent<HTMLInputElement>) => {
     setValue(e.target.value);
     updateSearchValue(e.target.value);
   };
 
   const onClickClear = () => {
     setValue("");
-		dispatch(setSearchValue(''))
+    dispatch(setSearchValue(""));
     inputRef.current?.focus();
   };
 

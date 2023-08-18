@@ -4,9 +4,9 @@ import { setSort } from "../redux/slices/filterSlice";
 import { Rootstate } from "../redux/store";
 
 type sortItem = {
-	name: string;
-	sortProperty: string;
-}
+  name: string;
+  sortProperty: string;
+};
 
 export const list: sortItem[] = [
   { name: "популярности (DESC)", sortProperty: "rating" },
@@ -17,9 +17,9 @@ export const list: sortItem[] = [
   { name: "алфавиту (ASC)", sortProperty: "-title" },
 ];
 
-const Sort:React.FC = () => {
+const Sort: React.FC = () => {
   const dispatch = useDispatch();
-  const sort = useSelector((state:Rootstate) => state.filter.sort); 
+  const sort = useSelector((state: Rootstate) => state.filter.sort);
   const sortRef = useRef<HTMLDivElement>(null);
 
   const [open, setOpen] = useState(false);
@@ -79,6 +79,6 @@ const Sort:React.FC = () => {
       )}
     </div>
   );
-}
+};
 
 export default Sort;

@@ -3,12 +3,19 @@ import logoSvg from "./assets/img/pizza-logo.svg";
 import Search from "./Search/index";
 import { useSelector } from "react-redux";
 import { Rootstate } from "../redux/store";
-import React from "react";
+import React, { useEffect, useRef } from "react";
 
-const Header:React.FC = () => {
-  const { items, totalPrice } = useSelector((state:Rootstate) => state.cart);
+const Header: React.FC = () => {
+  const { items, totalPrice } = useSelector((state: Rootstate) => state.cart);
+  const totalCount = items.reduce((sum, item) => sum + item.count, 0);
+  const isMounted = useRef(false);
 
-	const totalCount = items.reduce((sum, item) => sum + item.count, 0)
+  useEffect(() => {
+    if (isMounted.current) {
+      localStorage.setItem("cart", JSON.stringify(items));
+    }
+    isMounted.current = true;
+  }, [items]);
 
   return (
     <div className="header">
@@ -62,6 +69,6 @@ const Header:React.FC = () => {
       </div>
     </div>
   );
-}
+};
 
 export default Header;

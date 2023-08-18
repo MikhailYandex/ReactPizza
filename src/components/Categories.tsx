@@ -1,9 +1,9 @@
 import React from "react";
 
 type CategoriesProps = {
-	value: number;
-	onChangeCategory: (i: number) => void;
-}
+  value: number;
+  onChangeCategory: (i: number) => void;
+};
 
 const Categories: React.FC<CategoriesProps> = ({ value, onChangeCategory }) => {
   const categories = [
@@ -30,6 +30,6 @@ const Categories: React.FC<CategoriesProps> = ({ value, onChangeCategory }) => {
       </ul>
     </div>
   );
-}
+};
 
 export default Categories;

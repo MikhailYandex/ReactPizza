@@ -280,6 +280,14 @@ body {
             display: none;
           }
         }
+				&:disabled {
+					opacity: .4;
+					pointer-events: none;
+				}
+				&:disabled:hover {
+					background-color: #fff;
+					border-color: $orange;
+				}
       }
 
       b {

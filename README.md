@@ -4,7 +4,9 @@
 
 <!-- [Ссылка на Github Pages](https://mikhailyandex.github.io/BurgerReact/) -->
 
-<!-- <img width="1503" alt="HowToLearn" src="https://user-images.githubusercontent.com/114576286/225888172-08b8a113-05f3-48c2-8f33-9abc45aabff6.png"> -->
+<img width="1503" alt="HowToLearn" src="https://github.com/MikhailYandex/ReactPizza/assets/114576286/5eb206b3-38d4-4ff6-b4a6-fb89bdd67ed5">
+
+<img width="1503" alt="HowToLearn" src="https://github.com/MikhailYandex/ReactPizza/assets/114576286/af621089-69fc-45d1-b5d8-ec00ed7f81da">
 
 ### Используемые технологии
 * ReactJS 18
