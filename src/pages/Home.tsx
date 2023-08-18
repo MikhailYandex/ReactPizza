@@ -5,20 +5,21 @@ import Sort, { list } from "../components/Sort";
 import PizzaBlock from "../components/PizzaBlock";
 import Skeleton from "../components/Skeleton";
 import Pagination from "../components/Pagination/index";
-import { useDispatch, useSelector } from "react-redux";
+import { useSelector } from "react-redux";
 import {
   setCategoryId,
   setPageCount,
   setFilters,
-} from "../redux/slices/filterSlice.js";
+} from "../redux/slices/filterSlice";
 import { useNavigate } from "react-router-dom";
-import { fetchPizza } from "../redux/slices/pizzaSlice.js";
+import { fetchPizza } from "../redux/slices/pizzaSlice";
+import { Rootstate, UseAppDispatch } from "../redux/store";
 
 const Home: React.FC = () => {
-  const { categoryId, sort, pageCount, searchValue } = useSelector((state:any) => state.filter);
-  const { items, isLoading } = useSelector((state:any) => state.pizza);
+  const { categoryId, sort, pageCount, searchValue } = useSelector((state:Rootstate) => state.filter);
+  const { items, isLoading } = useSelector((state:Rootstate) => state.pizza);
 
-  const dispatch = useDispatch();
+  const dispatch = UseAppDispatch();
   const navigate = useNavigate();
   const isSearch = useRef(false);
   const isMount = useRef(false);
