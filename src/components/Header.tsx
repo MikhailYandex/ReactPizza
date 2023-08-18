@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import logoSvg from "./assets/img/pizza-logo.svg";
-import Search from "./Search/index.tsx";
+import Search from "./Search/index";
 import { useSelector } from "react-redux";
 
 function Header() {

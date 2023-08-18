@@ -1,10 +1,10 @@
 import React, { useEffect, useRef } from "react";
 import qs from "qs";
-import Categories from "../components/Categories.tsx";
-import Sort, { list } from "../components/Sort.tsx";
-import PizzaBlock from "../components/PizzaBlock.tsx";
-import Skeleton from "../components/Skeleton.tsx";
-import Pagination from "../components/Pagination/index.tsx";
+import Categories from "../components/Categories";
+import Sort, { list } from "../components/Sort";
+import PizzaBlock from "../components/PizzaBlock";
+import Skeleton from "../components/Skeleton";
+import Pagination from "../components/Pagination/index";
 import { useDispatch, useSelector } from "react-redux";
 import {
   setCategoryId,
