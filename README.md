@@ -1,10 +1,12 @@
-# React Pizza
+# 🍕 React Pizza
 
-##  🍕 Проект React Pizza представляет собой сервис выбора и заказов пицц.
+##  Проект React Pizza представляет собой сервис выбора и заказов пицц.
 
+<img width="1503" alt="ReactPizza" src="https://github.com/MikhailYandex/ReactPizza/assets/114576286/c8363592-bafe-46db-938e-8f882a1592f4">
+
+----
 [Ссылка на Github Pages](https://mikhailyandex.github.io/ReactPizza/)
 ----
-<img width="1503" alt="ReactPizza" src="https://github.com/MikhailYandex/ReactPizza/assets/114576286/c8363592-bafe-46db-938e-8f882a1592f4">
 
 ### Используемые технологии
 * ReactJS 18;
