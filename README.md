@@ -5,7 +5,7 @@
 * [Ссылка на Github Pages](https://mikhailyandex.github.io/ReactPizza/)
 ----
 
-<img width="1503" alt="ReactPizza" src="https://github.com/MikhailYandex/ReactPizza/assets/114576286/c8363592-bafe-46db-938e-8f882a1592f4">
+<img width="1503" alt="ReactPizza" src="https://github.com/MikhailYandex/ReactPizza/assets/114576286/44083b5f-ce15-4ce4-8c90-f2439038a740">
 
 ### Используемые технологии
 * ReactJS 18;
