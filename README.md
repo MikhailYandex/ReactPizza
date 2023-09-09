@@ -7,7 +7,7 @@
 
 <img width="1503" alt="ReactPizza" src="https://github.com/MikhailYandex/ReactPizza/assets/114576286/44083b5f-ce15-4ce4-8c90-f2439038a740">
 
-### Используемые технологии
+### Используемые технологии:
 * ReactJS 18;
 * TypeScript;
 * Redux Toolkit (хранение данных / пицц);
