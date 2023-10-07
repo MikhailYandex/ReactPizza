@@ -21,5 +21,5 @@
 * Lodash.Debounce;
 * Code Splitting;
 
-* [Ссылка на макет в Figma](https://www.figma.com/file/wWUnQwvRDWBfPx1v1pCAfO/React-Pizza?type=design&node-id=0-1&mode=design&t=MXhVxGSPx35WjNRM-0)
+[Ссылка на макет в Figma](https://www.figma.com/file/wWUnQwvRDWBfPx1v1pCAfO/React-Pizza?type=design&node-id=0-1&mode=design&t=MXhVxGSPx35WjNRM-0)
 
